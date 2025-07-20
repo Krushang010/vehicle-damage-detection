@@ -7,7 +7,7 @@ A web application built with **Streamlit** that detects damage in car images usi
 ---
 
 ## 🔍 Project Overview
-s
+
 This project uses a **deep learning model (ResNet50)** trained on car images to classify whether a car is **damaged or not**. The app allows users to upload a car photo and receive real-time damage detection results with visual feedback.
 
 ---
