@@ -5,6 +5,11 @@ A web application built with **Streamlit** that detects damage in car images usi
 ![App_Screenshot](App_Screenshot%20.jpg.png)
 
 ---
+## 🔗 Live Demo
+
+Check out the live app here:  
+👉 [Vehicle Damage Detection Streamlit App](https://vehicle-damage-detection-7dg6sazf2s5a4e7lyirg43.streamlit.app/)
+
 
 ## 🔍 Project Overview
 
