@@ -1,5 +1,6 @@
 import streamlit as st
 from model_helper import predict
+from PIL import Image
 import base64
 
 # ----- Page Config -----
@@ -73,16 +74,19 @@ st.markdown(
 # ----- Upload -----
 uploaded_file = st.file_uploader("📂 Upload your car image", type=["jpg", "jpeg", "png"])
 
-# ----- Prediction -----
 if uploaded_file is not None:
-    image_path = "temp_image.jpg"
+    try:
+        image = Image.open(uploaded_file)
+        st.image(image, caption="📸 Uploaded Image")
 
-    with open(image_path, "wb") as f:
-        f.write(uploaded_file.getbuffer())
+        # Save to a temporary path for prediction
+        image_path = "temp_image.jpg"
+        image.save(image_path)
 
-    st.image(uploaded_file, caption="📸 Uploaded Image", use_container_width=True)
+        with st.spinner("🧠 Analyzing damage... please wait"):
+            prediction = predict(image_path)
 
-    with st.spinner("🧠 Analyzing damage... please wait"):
-        prediction = predict(image_path)
+        st.markdown(f'<div class="result">🧾 Prediction: <span style="color:#FFD700;">{prediction}</span></div>', unsafe_allow_html=True)
 
-    st.markdown(f'<div class="result">🧾 Prediction: <span style="color:#FFD700;">{prediction}</span></div>', unsafe_allow_html=True)
+    except Exception as e:
+        st.error(f"⚠️ Error processing image: {e}")
