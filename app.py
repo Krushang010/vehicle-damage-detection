@@ -77,7 +77,7 @@ uploaded_file = st.file_uploader("📂 Upload your car image", type=["jpg", "jpe
 if uploaded_file is not None:
     try:
         image = Image.open(uploaded_file)
-        st.image(image, caption="📸 Uploaded Image", use_container_width=True)
+        st.image(image, caption="📸 Uploaded Image")
 
 
         # Save to a temporary path for prediction
