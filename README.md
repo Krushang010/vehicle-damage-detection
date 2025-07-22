@@ -21,10 +21,15 @@ This project uses a **deep learning model (ResNet50)** trained on car images to 
 
 - ✅ Upload car images in JPG/PNG format
 - 🧠 Uses pretrained ResNet50 model fine-tuned for Multi-Class Image Classification Model
+  
 1). Front-Damaged
+
 2). Rear-Damaged
+
 3). Crushed
+
 4). Broken
+
 5). Normal
 
 - 📈 Real-time prediction with clear result display
