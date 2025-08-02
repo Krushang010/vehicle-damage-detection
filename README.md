@@ -65,8 +65,7 @@ Make sure you have Python 3.11.9
 
 1. **Clone the repo:**
    ```bash
-   git clone https://github.com/yourusername/car-damage-detection.git
-   cd car-damage-detection
+   https://github.com/Krushang010/vehicle-damage-detection.git
    
 
 2. **Install dependencies:**
